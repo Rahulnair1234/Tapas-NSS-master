@@ -18,17 +18,20 @@ video {
   z-index: -1;
 }
 
-.about-us {
+
+.about-container{
   margin-top: -5px;
   background: #feac5e; /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #4bc0c8, #c779d0, #feac5e);
   background: linear-gradient(to right, #4bc0c8, #c779d0, #feac5e);
-  height: auto;
+   padding-bottom: 10px; /*!important */
+  /* height: 100vh; */
 }
-.about-us .title1 {
+
+.about-title-container{
   font-family: "Noto Sans Limbu", sans-serif;
   background-color: white;
-  width: 238px;
+  width: 305px;
   text-align: center;
   font-size: 24px;
   border-bottom-left-radius: 10px;
@@ -37,46 +40,29 @@ video {
   margin-left: 70px;
 }
 
-.para1 {
+.about-info-container{
+  display: flex;
   color: white;
-  background: #242834;
-  width: 545px;
-  font-size: 20px;
-  font-family: sans-serif;
-  font-weight: bolder;
+  flex-wrap: wrap;
+  background-color: black;
+  font-size: 22px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 20px;
+  padding: 33px;
   border-radius: 25px;
-  margin-left: 70px;
-  margin-top: 60px;
-  padding: 23px;
 }
 
-/* Section: For Mobile */
-@media (max-width: 950px) {
-  .para1 {
-    width: 90%;
-    font-size: 15px;
-    margin-left: 15px;
-    margin-top: 30px;
-    border-radius: 10px;
-    padding: 15px;
-  }
 
-  .about-us .title1 {
-    font-family: "Noto Sans Limbu", sans-serif;
-    background-color: white;
-    width: 150px;
-    text-align: center;
-    font-size: 16px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    padding: 5px 10px;
-    margin-left: 15px;
+@media (max-width:850px){
+  .about-title-container{
+    margin: auto;
+    font-size: 20px;
+    width: 290px;
   }
 }
+
 .team-container-block {
-  background: #feac5e; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #4bc0c8, #c779d0, #feac5e);
-  background: linear-gradient(to right, #4bc0c8, #c779d0, #feac5e);
+  background: black;
   font-size: 2rem;
   padding: 10px;
   position: relative;
@@ -116,4 +102,54 @@ video {
   color: white;
   padding: 2px;
   text-align: center;
+}
+
+footer{
+  background-color: #242834;
+  height: 20vh;
+  display: flex;
+  align-items: center;
+}
+
+footer .copy-right{
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  margin: 0 25px;
+  width: 100%;
+}
+footer .footer-logo{
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+footer #foot-logo{
+  height: 120px;
+  width: 120px;
+}
+
+
+
+@media (max-width:850px){
+  footer{
+      flex-direction: column;
+      justify-content: center;
+  }
+
+  footer .footer-logo{
+      display: flex;
+      width: 100%;
+      justify-content: center;
+    }
+
+  footer #foot-logo{
+      height: 90px;
+      width: 90px;
+      margin-left: 0;
+    }
+    
+    footer .copy-right{
+      text-align: center;
+    }
+    
 }
